@@ -25,3 +25,53 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  :root {
+    /* Background and Foreground */
+    --background: 0 0% 100%; /* No need to change, white background */
+    --foreground: 0 0% 3.9%; /* No need to change, near-black foreground */
+
+    /* Card and Popover */
+    --card: 0 0% 100%; /* Keeping as white */
+    --card-foreground: 0 0% 3.9%; /* Keeping as near-black */
+    --popover: 0 0% 100%; /* White for popovers */
+    --popover-foreground: 0 0% 3.9%; /* Near-black for popover text */
+
+    /* Primary Color */
+    --primary: 258 93% 72%; /* Adjusted to match #9675FA (Primary) in HSL */
+    --primary-foreground: 0 0% 98%; /* Keeping as near-white for contrast */
+
+    /* Secondary Color */
+    --secondary: 0 0% 96.1%; /* Keeping this light grey */
+    --secondary-foreground: 0 0% 9%; /* Keeping this near-black for contrast */
+
+    /* Muted Color */
+    --muted: 0 0% 96.1%; /* Keeping light grey muted */
+    --muted-foreground: 0 0% 45.1%; /* Keeping as medium grey for muted text */
+
+    /* Accent Color */
+    --accent: 18 100% 53%; /* Adjusted to #FF5815 (Accent) */
+    --accent-foreground: 0 0% 9%; /* Near-black for contrast against accent */
+
+    /* Destructive Color */
+    --destructive: 0 84.2% 60.2%; /* Keeping as red */
+    --destructive-foreground: 0 0% 98%; /* Keeping as near-white for contrast */
+
+    /* Border and Input */
+    --border: 0 0% 89.8%; /* Keeping as light grey */
+    --input: 0 0% 89.8%; /* Same as border */
+
+    /* Ring */
+    --ring: 0 0% 3.9%; /* Near-black for focus rings or borders */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
