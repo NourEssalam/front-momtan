@@ -1,6 +1,11 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import BoxModel from "@/components/shared-components/BoxModel";
+import Header from "@/components/shared-components/Header";
 
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Header />
+      {/* <BoxModel /> */}
+    </>
+  );
 }

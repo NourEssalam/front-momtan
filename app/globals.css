@@ -31,19 +31,33 @@ body {
     /* Background and Foreground */
     --background: 0 0% 100%; /* No need to change, white background */
     --foreground: 0 0% 3.9%; /* No need to change, near-black foreground */
+    --section-background: 256, 93%, 94%;
 
     /* Card and Popover */
     --card: 0 0% 100%; /* Keeping as white */
     --card-foreground: 0 0% 3.9%; /* Keeping as near-black */
     --popover: 0 0% 100%; /* White for popovers */
     --popover-foreground: 0 0% 3.9%; /* Near-black for popover text */
-
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
     /* Primary Color */
     --primary: 258 93% 72%; /* Adjusted to match #9675FA (Primary) in HSL */
     --primary-foreground: 0 0% 98%; /* Keeping as near-white for contrast */
 
-    /* Secondary Color */
-    --secondary: 0 0% 96.1%; /* Keeping this light grey */
+    /* Secondary colors */
+    /* Shades */
+    --stronger-shade: 255, 36%, 22%;
+    --lighter-shade: 255, 36%, 43%;
+    /* Tints */
+    --stronger-tint: 255, 94%, 80%;
+    --medium-tint: 256, 93%, 94%;
+    --lighter-tint: 257, 100%, 97%;
+
+    /* greys */
+    --grey: 210, 10%, 23%;
+
+    /* From shadcn Secondary Color */
+    --secondary: 210, 10%, 23%; /* Keeping this light grey */
     --secondary-foreground: 0 0% 9%; /* Keeping this near-black for contrast */
 
     /* Muted Color */
@@ -64,6 +78,9 @@ body {
 
     /* Ring */
     --ring: 0 0% 3.9%; /* Near-black for focus rings or borders */
+
+    /* Radius */
+    --radius: 0.5rem;
   }
 }
 
