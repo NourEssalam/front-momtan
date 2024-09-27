@@ -8,11 +8,26 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { mainMenuType } from "@/lib/types/menu-types";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      // Use Tailwind's overflow-hidden utility to disable body scroll
+      document.body.classList.add("overflow-hidden");
+    } else {
+      // Remove the class when menu is closed
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    // Cleanup when component unmounts
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [open]);
   return (
     <header className="bg-section relative flex items-center py-5 px-5 md:px-10  lg:px-20 h-16  lg:h-20 w-full justify-between ">
       <Link href="/" className=" w-16 h-16 lg:w-16 lg:h-16 ">
@@ -34,7 +49,7 @@ export default function Header() {
             key={menu.name}
             href={menu.href}
             className="text-grey font-medium text-lg capitalize transition-colors duration-300 inline-block
-           py-[1.2rem] hover:text-shade active:text-shade"
+           py-[1.2rem] hover:text-accent active:text-shade"
           >
             {menu.name}
           </Link>
@@ -42,26 +57,24 @@ export default function Header() {
         {/* cta */}
         <Link
           href="/donation"
-          className="bg-primary/90 hover:bg-primary text-white uppercase font-medium text-lg px-5 py-px border rounded-lg "
+          className="bg-primary/90 hover:bg-accent text-white uppercase font-medium text-lg px-5 py-px border rounded-lg "
         >
           Donate
         </Link>{" "}
       </nav>
       <div className="action hidden  lg:flex justify-between lg:w-24 gap-6 items-center">
-        <CiSearch className="text-grey stroke-1 w-7 h-7 cursor-pointer" />
+        <CiSearch className="text-grey stroke-1 w-7 h-7 cursor-pointer hover:text-accent" />
         <FaGlobeAmericas
-          className="text-grey w-6 h-6 cursor-pointer"
+          className="text-grey w-6 h-6 cursor-pointer hover:text-accent"
           onClick={() => alert("choose a language")}
         />
       </div>
 
-      {/* mobile nav */}
-
       {/* nav actions */}
       <div className="action lg:hidden   flex justify-between lg:w-24 gap-6 items-center">
-        <CiSearch className="text-grey stroke-1 w-7 h-7 cursor-pointer" />
+        <CiSearch className="text-grey stroke-1 w-7 h-7 hover:text-accent cursor-pointer" />
         <FaGlobeAmericas
-          className="text-grey w-6 h-6  cursor-pointer"
+          className="text-grey w-6 h-6  cursor-pointer hover:text-accent"
           onClick={() => alert("choose a language")}
         />
         <div className="open-close relative  flex items-center justify-center">
@@ -74,31 +87,38 @@ export default function Header() {
           <IoIosCloseCircleOutline
             className={`absolute transition-opacity duration-300 ${
               open ? "opacity-100" : "opacity-0"
-            } cursor-pointer text-grey h-8 w-8 z-10`}
+            } cursor-pointer text-grey h-8 w-8 z-20`}
             onClick={() => setOpen(!open)}
           />
         </div>
       </div>
+
+      {/* mobile nav */}
+
       <nav
-        className={`w-full h-full fixed top-0 right-0 flex flex-col justify-center items-center
-          bg-white text-tint z-2 transition-all duration-300 transform opacity-80  ${
-            open ? "translate-x-0" : "translate-x-full"
-          }
+        className={`w-full h-full  fixed top-0 right-0 flex flex-col
+           justify-center items-center gap-0
+         bg-white text-tint z-5 transition-all duration-300 transform opacity-90 
+           ${open ? "translate-x-0" : "translate-x-full"}
         `}
       >
-        {mainMenu.map((menu: mainMenuType) => (
-          <Link
-            key={menu.name}
-            href={menu.href}
-            className="text-grey font-medium text-lg capitalize transition-colors duration-300 inline-block
+        <div className="flex flex-col items-center justify-center   w-full h-[60%] overflow-scroll">
+          {mainMenu.map((menu: mainMenuType) => (
+            <Link
+              key={menu.name}
+              href={menu.href}
+              className="text-grey font-medium text-xl capitalize transition-colors duration-300 
            py-[1.2rem] hover:text-shade active:text-shade"
-          >
-            {menu.name}
-          </Link>
-        ))}
+            >
+              {menu.name}
+            </Link>
+          ))}
+        </div>
+
         <Link
           href="/donation"
-          className="bg-primary/90 hover:bg-primary text-white uppercase font-medium text-lg px-5 py-px border rounded-lg "
+          className="bg-primary/90 hover:bg-primary text-white uppercase
+           font-medium text-xl px-5 py-px border rounded-lg "
         >
           Donate
         </Link>

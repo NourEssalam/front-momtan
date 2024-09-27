@@ -130,3 +130,15 @@ Privacy & terms
 ### volunteer page
 
 ### Partnairs page
+
+### Footer
+
+- contact us
+- about
+- upcomming events
+- archive
+- get involved
+- policies
+- blog
+- programs
+- locations

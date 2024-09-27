@@ -26,6 +26,8 @@ const config: Config = {
         },
         grey: {
           DEFAULT: "hsl(var(--grey))",
+          medium: "#555",
+          light: "#767676",
         },
         card: {
           DEFAULT: "hsl(var(--card))",

@@ -1,4 +1,4 @@
-import BoxModel from "@/components/shared-components/BoxModel";
+import Footer from "@/components/shared-components/Footer";
 import Header from "@/components/shared-components/Header";
 
 export default function Home() {
@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <Header />
       {/* <BoxModel /> */}
+      <Footer />
     </>
   );
 }
