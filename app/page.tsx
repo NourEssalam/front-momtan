@@ -1,12 +1,13 @@
+import AboutNutshell from "@/components/home/AboutNutshell";
 import Hero from "@/components/home/Hero";
-import Footer from "@/components/shared-components/Footer";
-import Header from "@/components/shared-components/Header";
+import Partner from "@/components/home/Partner";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      {/* <BoxModel /> */}
+      <Partner />
+      <AboutNutshell />
     </>
   );
 }

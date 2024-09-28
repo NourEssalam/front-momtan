@@ -3,6 +3,7 @@ import {
   footerMenuType,
   mainMenuType,
   socialsType,
+  partnerType,
 } from "./types/menu-types";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
@@ -124,5 +125,33 @@ export const contactInfo: contactInfoType[] = [
     type: "email",
     value: "organisation.citoyennete.dhd@gmail.com",
     link: "mailto:organisation.citoyennete.dhd@gmail.com",
+  },
+];
+
+export const partnersLogos: partnerType[] = [
+  {
+    name: "moura9iboun",
+    alt: "logo of moura9iboun",
+  },
+  {
+    name: "channel",
+    alt: "logo of channel",
+  },
+  {
+    name: "moura9iboun",
+    alt: "logo of moura9iboun",
+  },
+
+  {
+    name: "moura9iboun",
+    alt: "logo of moura9iboun",
+  },
+  {
+    name: "Opera_GX",
+    alt: "logo of Opera_GX",
+  },
+  {
+    name: "vodafone",
+    alt: "logo of vodafone",
   },
 ];

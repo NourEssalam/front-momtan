@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} antialiased bg-white`}>
+      <body className={`${rubik.className} antialiased `}>
         <Header />
         {children}
         <Footer />
