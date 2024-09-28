@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/shared-components/Header";
+import Footer from "@/components/shared-components/Footer";
 
 export const metadata: Metadata = {
   title: "Momtan Next App",
@@ -22,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rubik.className} antialiased bg-white`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

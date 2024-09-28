@@ -102,7 +102,7 @@ export default function Header() {
            ${open ? "translate-x-0" : "translate-x-full"}
         `}
       >
-        <div className="flex flex-col items-center justify-center   w-full h-[60%] overflow-scroll">
+        <div className="flex flex-col items-center justify-center   w-full h-[90%] overflow-scroll">
           {mainMenu.map((menu: mainMenuType) => (
             <Link
               key={menu.name}

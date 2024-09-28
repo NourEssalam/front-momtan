@@ -58,7 +58,7 @@ body {
 
     /* From shadcn Secondary Color */
     --secondary: 210, 10%, 23%; /* Keeping this light grey */
-    --secondary-foreground: 0 0% 9%; /* Keeping this near-black for contrast */
+    --secondary-foreground: 0 0% 100%; /* Keeping this near-black for contrast */
 
     /* Muted Color */
     --muted: 0 0% 96.1%; /* Keeping light grey muted */
@@ -90,5 +90,11 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[90rem] mx-auto py-10 px-12  md:py-12  lg:px-24 lg:py-12;
   }
 }

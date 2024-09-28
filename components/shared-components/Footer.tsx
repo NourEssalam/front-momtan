@@ -17,83 +17,85 @@ export default function Footer() {
   const year = date.getFullYear();
 
   return (
-    <footer className="bg-white  py-24 px-6 sm:px-12 flex flex-col justify-center md:items-center gap-16">
-      <main
-        className=" grid grid-cols-1 gap-x-6 gap-y-12 
-      sm:gap-x-12 sm:grid-cols-2 lg:grid-cols-4"
-      >
-        {/* logo and social */}
+    <footer className="bg-white">
+      <div className="container flex flex-col justify-center md:items-center gap-16">
+        <main
+          className=" grid grid-cols-1 gap-x-6 gap-y-12 
+      sm:gap-x-12 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {/* logo and social */}
 
-        <Link href="/" className=" w-20 mb-4 md:w-28 ">
-          <Image
-            src="/img/logos/momtan-logo without subtitle-header.png"
-            alt="logo of the header"
-            width="150"
-            height="150"
-            // fill={true}
-            sizes="(max-width: 1200px) 50vw, 33vw"
-            className=" object-contain"
-            priority={true}
-          />
-        </Link>
+          <Link href="/" className=" w-20 mb-4 md:w-28 ">
+            <Image
+              src="/img/logos/momtan-logo without subtitle-header.png"
+              alt="logo of the header"
+              width="150"
+              height="150"
+              // fill={true}
+              sizes="(max-width: 1200px) 50vw, 33vw"
+              className=" object-contain"
+              priority={true}
+            />
+          </Link>
 
-        {/* socials */}
-        <ul className="grid grid-cols-4 sm:grid-cols-2  place-self-start gap-8">
-          {socials.map((social) => (
-            <li key={social.name}>
-              <Link
-                href={social.href}
-                className="text-sm  text-grey-medium hover:text-accent transition-colors duration-300"
-              >
-                <social.Icon className="w-8 h-8 " />
-              </Link>
-            </li>
-          ))}
-        </ul>
-        {/* contact */}
-        <div className="">
-          <h3 className="text-lg text-grey-medium  font-semibold mb-4">
-            Contact Us
-          </h3>
-          <address className="contacts flex flex-col gap-1 ">
-            {contactInfo.map((info: contactInfoType) => (
-              <Link
-                className={`${
-                  info.type === "address" ? "font-medium" : "font-normal"
-                } text-sm lg:text-base inline-block text-grey-light hover:text-accent transition-colors duration-300`}
-                href={!info.link ? "#" : info.link}
-                key={info.value}
-              >
-                {info.value}
-              </Link>
+          {/* socials */}
+          <ul className="grid grid-cols-4 sm:grid-cols-2  place-self-start gap-8">
+            {socials.map((social) => (
+              <li key={social.name}>
+                <Link
+                  href={social.href}
+                  className="text-sm  text-grey-medium hover:text-accent transition-colors duration-300"
+                >
+                  <social.Icon className="w-8 h-8 " />
+                </Link>
+              </li>
             ))}
-          </address>
-        </div>
-        {/* quick links */}
-        {Object.keys(groupedMenu).map((key) => (
-          <div key={key} className=" ">
-            <h3 className="text-lg text-grey-medium font-semibold mb-4">
-              {key}
+          </ul>
+          {/* contact */}
+          <div className="">
+            <h3 className="text-lg text-grey-medium  font-semibold mb-4">
+              Contact Us
             </h3>
-            <ul>
-              {groupedMenu[key].map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm lg:text-base text-grey-light hover:text-accent transition-colors duration-300"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
+            <address className="contacts flex flex-col gap-1 ">
+              {contactInfo.map((info: contactInfoType) => (
+                <Link
+                  className={`${
+                    info.type === "address" ? "font-medium" : "font-normal"
+                  } text-sm lg:text-base inline-block text-grey-light hover:text-accent transition-colors duration-300`}
+                  href={!info.link ? "#" : info.link}
+                  key={info.value}
+                >
+                  {info.value}
+                </Link>
               ))}
-            </ul>
+            </address>
           </div>
-        ))}
-      </main>
+          {/* quick links */}
+          {Object.keys(groupedMenu).map((key) => (
+            <div key={key} className=" ">
+              <h3 className="text-lg text-grey-medium font-semibold mb-4">
+                {key}
+              </h3>
+              <ul>
+                {groupedMenu[key].map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm lg:text-base text-grey-light hover:text-accent transition-colors duration-300"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </main>
 
-      <p className="text-sm iniline-block text-grey-light lg:col-span-3 text-center">
-        Copyright &copy; {year} by Momtan, Inc. All right reserved.
-      </p>
+        <p className="text-sm iniline-block text-grey-light lg:col-span-3 text-center">
+          Copyright &copy; {year} by Momtan, Inc. All right reserved.
+        </p>
+      </div>
     </footer>
   );
 }
