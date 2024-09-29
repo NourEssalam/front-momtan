@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
+import Link from "next/link";
 export default function Hero() {
   return (
     <section className="  bg-section w-full lg:h-[40rem] ">
@@ -23,15 +24,22 @@ export default function Hero() {
             Goals and a better future for the next generations.
           </p>
           <div className="flex gap-4 lg:gap-8 mt-10">
-            <Button className="md:text-xl md:h-12 md:px-6 ">
+            <Link
+              href={"/get-involved"}
+              className={`${buttonVariants({
+                variant: "default",
+              })} md:text-xl md:h-12 md:px-6`}
+            >
               Get Involved
-            </Button>
-            <Button
-              className="md:text-xl md:h-12 md:px-6 "
-              variant={"secondary"}
+            </Link>
+            <Link
+              href={"/about-us"}
+              className={`${buttonVariants({
+                variant: "secondary",
+              })} md:text-xl md:h-12 md:px-6`}
             >
               Learn More &darr;
-            </Button>
+            </Link>
           </div>
         </div>
 

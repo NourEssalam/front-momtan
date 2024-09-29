@@ -27,7 +27,7 @@ export default function Footer() {
 
           <Link href="/" className=" w-20 mb-4 md:w-28 ">
             <Image
-              src="/img/logos/momtan-logo without subtitle-header.png"
+              src="/img/logos/momtan-logo-footer.png"
               alt="logo of the header"
               width="150"
               height="150"
