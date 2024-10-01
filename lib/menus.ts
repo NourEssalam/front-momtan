@@ -138,12 +138,12 @@ export const partnersLogos: partnerType[] = [
     alt: "logo of channel",
   },
   {
-    name: "moura9iboun",
+    name: "moura9iboun1",
     alt: "logo of moura9iboun",
   },
 
   {
-    name: "moura9iboun",
+    name: "moura9iboun2",
     alt: "logo of moura9iboun",
   },
   {

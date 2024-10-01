@@ -2,6 +2,7 @@ import { contactInfo, footerMenu, socials } from "@/lib/menus";
 import { contactInfoType, footerMenuType } from "@/lib/types/menu-types";
 import Link from "next/link";
 import Image from "next/image";
+import Container from "../shared-components/Container";
 
 export default function Footer() {
   const groupedMenu = footerMenu.reduce<Record<string, footerMenuType[]>>(
@@ -17,11 +18,11 @@ export default function Footer() {
   const year = date.getFullYear();
 
   return (
-    <footer className="bg-white">
-      <div className="container flex flex-col justify-center md:items-center gap-16">
+    <footer className="">
+      <Container variant="default">
         <main
           className=" grid grid-cols-1 gap-x-6 gap-y-12 
-      sm:gap-x-12 sm:grid-cols-2 lg:grid-cols-3"
+      sm:gap-x-12 sm:grid-cols-2 lg:grid-cols-3 mb-24"
         >
           {/* logo and social */}
 
@@ -44,7 +45,7 @@ export default function Footer() {
               <li key={social.name}>
                 <Link
                   href={social.href}
-                  className="text-sm  text-grey-medium hover:text-accent transition-colors duration-300"
+                  className="text-sm  text-grey hover:text-accent transition-colors duration-300"
                 >
                   <social.Icon className="w-8 h-8 " />
                 </Link>
@@ -53,7 +54,7 @@ export default function Footer() {
           </ul>
           {/* contact */}
           <div className="">
-            <h3 className="text-lg text-grey-medium  font-semibold mb-4">
+            <h3 className="text-lg text-grey  font-semibold mb-4">
               Contact Us
             </h3>
             <address className="contacts flex flex-col gap-1 ">
@@ -61,7 +62,7 @@ export default function Footer() {
                 <Link
                   className={`${
                     info.type === "address" ? "font-medium" : "font-normal"
-                  } text-sm lg:text-base inline-block text-grey-light hover:text-accent transition-colors duration-300`}
+                  } text-sm lg:text-base inline-block text-grey hover:text-accent transition-colors duration-300`}
                   href={!info.link ? "#" : info.link}
                   key={info.value}
                 >
@@ -73,15 +74,13 @@ export default function Footer() {
           {/* quick links */}
           {Object.keys(groupedMenu).map((key) => (
             <div key={key} className=" ">
-              <h3 className="text-lg text-grey-medium font-semibold mb-4">
-                {key}
-              </h3>
+              <h3 className="text-lg text-grey font-semibold mb-4">{key}</h3>
               <ul>
                 {groupedMenu[key].map((item) => (
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-sm lg:text-base text-grey-light hover:text-accent transition-colors duration-300"
+                      className="text-sm lg:text-base text-grey hover:text-accent transition-colors duration-300"
                     >
                       {item.name}
                     </Link>
@@ -95,7 +94,7 @@ export default function Footer() {
         <p className="text-sm iniline-block text-grey-light lg:col-span-3 text-center">
           Copyright &copy; {year} by Momtan, Inc. All right reserved.
         </p>
-      </div>
+      </Container>
     </footer>
   );
 }
