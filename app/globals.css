@@ -73,8 +73,8 @@ body {
     --destructive-foreground: 0 0% 98%; /* Keeping as near-white for contrast */
 
     /* Border and Input */
-    --border: 0 0% 89.8%; /* Keeping as light grey */
-    --input: 0 0% 89.8%; /* Same as border */
+    --border: 0 0% 89.8%; /* #000 Keeping as light grey */
+    --input: 0 0% 89.8%; /* #000 Same as border */
 
     /* Ring */
     --ring: 0 0% 3.9%; /* Near-black for focus rings or borders */
