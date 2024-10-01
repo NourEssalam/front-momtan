@@ -17,7 +17,7 @@ const config: Config = {
         },
         shade: {
           DEFAULT: "hsl(var(--lighter-shade))",
-          "shade-light": "hsl(var(--lighter-shade))",
+          strong: "hsl(var(--stronger-shade))",
         },
         tint: {
           DEFAULT: "hsl(var(--medium-tint))",

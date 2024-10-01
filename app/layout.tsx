@@ -23,11 +23,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} antialiased `}>
+      <body
+        className={`${rubik.className} antialiased inset-0 relative bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]`}
+      >
+        <div
+          className="absolute left-0 right-0 top-0 -z-10 m-auto h-full w-full 
+        rounded-full bg-fuchsia-200 opacity-20 blur-[100px]"
+        ></div>
+
         <Header />
+
         {children}
         <Footer />
       </body>
     </html>
   );
 }
+
+/* 
+<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+<div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div>
+</div>
+
+*/
