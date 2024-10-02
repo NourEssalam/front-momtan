@@ -1,4 +1,3 @@
-import { socials } from "../menus";
 import { IconType } from "react-icons";
 
 export type mainMenuType = {

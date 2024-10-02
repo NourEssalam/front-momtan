@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, buttonVariants } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import Link from "next/link";
 export default function Hero() {
   return (

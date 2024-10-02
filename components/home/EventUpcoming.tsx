@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { buttonVariants } from "../ui/button";
 import EventCard from "../shared-components/EventCard";
 import { eventPlaceholder } from "@/lib/data-placeholders";
 import { eventMetaDataType } from "@/lib/types/global-types";

@@ -7,7 +7,6 @@ import Image from "next/image";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -25,7 +24,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { newsLetterSchema } from "@/lib/form-schema";
-import Link from "next/link";
 
 export default function SignUp() {
   const form = useForm<z.infer<typeof newsLetterSchema>>({
