@@ -6,7 +6,7 @@ export default function AboutNutshell() {
   return (
     <Container
       variant="rounded-primary"
-      className="flex flex-col justify-center items-center"
+      innerClassName="flex flex-col justify-center items-center"
     >
       <h1 className="text-sm text-center font-medium uppercase tracking-widest mb-10 text-shade">
         About Us

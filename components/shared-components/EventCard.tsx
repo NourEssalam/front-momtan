@@ -18,7 +18,8 @@ export default function EventUpcoming({
   return (
     <Link
       href={`/events/${title}`}
-      className="relative isolate flex shadow-xl flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mx-auto "
+      className="relative isolate flex shadow-xl flex-col justify-end overflow-hidden
+       rounded-2xl px-8 pb-8 pt-40 max-w-sm mx-auto "
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
     >

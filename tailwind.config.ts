@@ -73,6 +73,9 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        "inset-focus": " 0 0 4px 2px rgba(255, 255, 255,1 )", // Customize the shadow values
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

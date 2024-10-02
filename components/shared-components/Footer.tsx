@@ -17,7 +17,9 @@ export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
 
-  return (
+  //items must be in the center
+
+  FIXME: return (
     <footer className="">
       <Container variant="default">
         <main
@@ -25,7 +27,6 @@ export default function Footer() {
       sm:gap-x-12 sm:grid-cols-2 lg:grid-cols-3 mb-24"
         >
           {/* logo and social */}
-
           <Link href="/" className=" w-20 mb-4 md:w-28 ">
             <Image
               src="/img/logos/momtan-logo-footer.png"
@@ -38,8 +39,8 @@ export default function Footer() {
               priority={true}
             />
           </Link>
-
           {/* socials */}
+
           <ul className="grid grid-cols-4 sm:grid-cols-2  place-self-start gap-8">
             {socials.map((social) => (
               <li key={social.name}>

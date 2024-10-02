@@ -1,10 +1,7 @@
 import { z } from "zod";
 
 export const newsLetterSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(3, { message: "Please enter your name. - 3 characters minimum" }),
+  name: z.string().trim().min(3, { message: "Please enter your name." }),
   email: z
     .string()
     .email({ message: "Please enter a valid email address." })

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Container from "../shared-components/Container";
 export default function Partner() {
   return (
-    <Container variant="default" className="md:mt-0">
+    <Container>
       <h1 className="text-sm text-center font-medium uppercase tracking-widest mb-10 text-gray-500">
         trusted by
       </h1>
