@@ -17,7 +17,7 @@ const config: Config = {
         },
         shade: {
           DEFAULT: "hsl(var(--lighter-shade))",
-          "shade-light": "hsl(var(--lighter-shade))",
+          strong: "hsl(var(--stronger-shade))",
         },
         tint: {
           DEFAULT: "hsl(var(--medium-tint))",
@@ -72,6 +72,9 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        "inset-focus": " 0 0 4px 2px rgba(255, 255, 255,1 )", // Customize the shadow values
       },
     },
   },

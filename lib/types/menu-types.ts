@@ -23,3 +23,8 @@ export type contactInfoType = {
   value: string; // The content (address, phone number, or email)
   link?: string; // Optional: The link to make it clickable (for phone/email)
 };
+
+export type partnerType = {
+  name: string;
+  alt: string;
+};

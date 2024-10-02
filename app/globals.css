@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 0 0% 0%; /* No need to change, white background */
+  --foreground: 210, 10%, 23%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,8 +15,8 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -29,8 +29,8 @@ body {
 @layer base {
   :root {
     /* Background and Foreground */
-    --background: 0 0% 100%; /* No need to change, white background */
-    --foreground: 0 0% 3.9%; /* No need to change, near-black foreground */
+    --background: 0 0% 0%; /* No need to change, white background */
+    --foreground: 210, 10%, 23%; /* No need to change, near-black foreground */
     --section-background: 256, 93%, 94%;
 
     /* Card and Popover */
@@ -46,18 +46,18 @@ body {
 
     /* Secondary colors */
     /* Shades */
-    --stronger-shade: 255, 36%, 22%;
-    --lighter-shade: 255, 36%, 43%;
+    --stronger-shade: 255, 36%, 22%; /* 	#2e244c */
+    --lighter-shade: 255, 36%, 43%; /* #5a4695 */
     /* Tints */
-    --stronger-tint: 255, 94%, 80%;
-    --medium-tint: 256, 93%, 94%;
-    --lighter-tint: 257, 100%, 97%;
+    --stronger-tint: 255, 94%, 80%; /* #b49cfc */
+    --medium-tint: 256, 93%, 94%; /* 	#e9e1fe*/
+    --lighter-tint: 257, 100%, 97%; /* #f4f0ff */
 
     /* greys */
     --grey: 210, 10%, 23%;
 
     /* From shadcn Secondary Color */
-    --secondary: 210, 10%, 23%; /* Keeping this light grey */
+    --secondary: 210, 10%, 23%; /* 	#353b41  this light grey */
     --secondary-foreground: 0 0% 100%; /* Keeping this near-black for contrast */
 
     /* Muted Color */
@@ -73,8 +73,8 @@ body {
     --destructive-foreground: 0 0% 98%; /* Keeping as near-white for contrast */
 
     /* Border and Input */
-    --border: 0 0% 89.8%; /* Keeping as light grey */
-    --input: 0 0% 89.8%; /* Same as border */
+    --border: 0 0% 89.8%; /* #000 Keeping as light grey */
+    --input: 0 0% 89.8%; /* #000 Same as border */
 
     /* Ring */
     --ring: 0 0% 3.9%; /* Near-black for focus rings or borders */
@@ -89,12 +89,19 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
   }
 }
 
 @layer components {
   .container {
-    @apply max-w-[90rem] mx-auto py-10 px-12  md:py-12  lg:px-24 lg:py-12;
+    @apply max-w-[1200px] mx-auto my-0 py-12 px-6  md:py-12  lg:px-24 lg:py-12;
   }
+}
+
+@layer utilities {
+  /* .cta-img-box {
+    @apply bg-cover bg-center filter brightness-110;
+    background-image: theme("backgroundImage.cta-gradient");
+  } */
 }

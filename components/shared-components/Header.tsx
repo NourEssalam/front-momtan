@@ -32,7 +32,7 @@ export default function Header() {
     <header className="bg-section relative flex items-center py-5 px-5 md:px-10  lg:px-20 h-16  lg:h-20 w-full justify-between ">
       <Link href="/" className=" w-16 h-16 lg:w-16 lg:h-16 ">
         <Image
-          src="/img/logos/momtan-logo without subtitle-header.png"
+          src="/img/logos/momtan-logo-header.png"
           alt="logo of the header"
           width="100"
           height="100"
