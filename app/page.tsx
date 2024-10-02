@@ -1,9 +1,12 @@
-import Image from "next/image";
+import Footer from "@/components/shared-components/Footer";
+import Header from "@/components/shared-components/Header";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-white text-black">
-      momtan
-    </div>
+    <>
+      <Header />
+      {/* <BoxModel /> */}
+      <Footer />
+    </>
   );
 }
