@@ -1,4 +1,3 @@
-import Container from "@/components/shared-components/Container";
 import { infoIntroType } from "@/lib/types/global-types";
 import Image from "next/image";
 import Link from "next/link";
