@@ -38,7 +38,7 @@ export default function Container({
               "rounded-3xl  lg:shadow-2xl  bg-section":
                 variant === "rounded-primary",
               // Secondary rounded section
-              "rounded-3xl  bg-secondary": variant === "rounded-secondary",
+              "rounded-3xl  bg-green-300": variant === "rounded-secondary",
             },
             innerClassName
           )}
