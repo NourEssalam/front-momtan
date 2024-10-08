@@ -50,7 +50,7 @@ export default function Header() {
           <Link
             key={menu.name}
             href={menu.href}
-            className="text-grey font-medium text-lg capitalize transition-colors duration-300 inline-block
+            className="text-grey font-base text-lg capitalize transition-colors duration-300 inline-block
            py-[1.2rem] hover:text-accent active:text-shade"
           >
             {menu.name}
@@ -59,7 +59,7 @@ export default function Header() {
         {/* cta */}
         <Link
           href="/donation"
-          className="bg-primary/90 hover:bg-accent text-white uppercase font-medium text-lg px-5 py-px border rounded-lg "
+          className="bg-primary/90 hover:bg-accent text-white uppercase font-base text-lg px-5 py-px border rounded-lg "
         >
           Donate
         </Link>{" "}

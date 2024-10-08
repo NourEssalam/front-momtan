@@ -24,10 +24,10 @@ export function DialogSearchButton() {
         <CiSearch className="text-grey stroke-1 w-7 h-7 cursor-pointer hover:text-accent" />
       </DialogTrigger>
       <DialogContent
-        className=" gap-0 max-w-[1200px] inset-0 p-4 mx-auto  bg-white left-[0%] top-[0%] 
+        className=" gap-0 max-w-[1024px] inset-0 p-4 mx-auto md:my-10  bg-white left-[0%] top-[0%] 
       translate-x-[0%] translate-y-[0%]"
       >
-        <DialogHeader className="sm:justify-center mb-0 gap-2 space-x-0">
+        <DialogHeader className=" text-left mb-0 gap-2 space-x-0">
           <DialogTitle>Search</DialogTitle>
 
           <div className="">
@@ -42,12 +42,12 @@ export function DialogSearchButton() {
           </div>
         </DialogHeader>
         {/* Results */}
-        <div className="overflow-y-scroll grid grid-cols-2 gap-3 mt-4 ">
+        <div className="overflow-y-scroll md:grid grid-cols-2 gap-3 mt-4 ">
           {/* events */}
           <div className="flex flex-col gap-2 p-4">
             <h3 className="text-lg font-bold">Events</h3>
 
-            <div className="bg-red-500 grid grid-cols-2">
+            <div className=" grid grid-cols-2">
               <SearchResultElement />
               <SearchResultElement />
               <SearchResultElement />
@@ -57,7 +57,17 @@ export function DialogSearchButton() {
           <div className="flex flex-col gap-2 p-4">
             <h3 className="text-lg font-bold">Posts</h3>
 
-            <div className="bg-red-500 grid grid-cols-2">
+            <div className=" grid grid-cols-2">
+              <SearchResultElement />
+              <SearchResultElement />
+              <SearchResultElement />
+              <SearchResultElement />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 p-4">
+            <h3 className="text-lg font-bold">Posts</h3>
+
+            <div className=" grid grid-cols-2">
               <SearchResultElement />
               <SearchResultElement />
               <SearchResultElement />
@@ -65,14 +75,6 @@ export function DialogSearchButton() {
             </div>
           </div>
         </div>
-
-        {/* <DialogFooter className="sm:justify-start">
-          <DialogClose asChild>
-            <Button type="button" variant="secondary">
-              Close
-            </Button>
-          </DialogClose>
-        </DialogFooter> */}
       </DialogContent>
     </Dialog>
   );
