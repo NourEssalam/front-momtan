@@ -3,6 +3,7 @@ import { contactInfoType, footerMenuType } from "@/lib/types/menu-types";
 import Link from "next/link";
 import Image from "next/image";
 import Container from "../shared-components/Container";
+import { Separator } from "@/components/ui/separator";
 
 export default function Footer() {
   const groupedMenu = footerMenu.reduce<Record<string, footerMenuType[]>>(
@@ -20,7 +21,10 @@ export default function Footer() {
   //items must be in the center
 
   FIXME: return (
-    <footer className="">
+    <footer className="my-24">
+      {/* main section */}
+
+      <Separator className="max-w-[1200px] mx-auto  px-6    lg:px-24" />
       <Container variant="default">
         <main
           className=" grid grid-cols-1 gap-x-6 gap-y-12 
