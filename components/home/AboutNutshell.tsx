@@ -21,7 +21,7 @@ export default function AboutNutshell() {
       </p>
       <div className="flex gap-4 lg:gap-8 mt-10">
         <Link
-          href={"/about-us"}
+          href={"/about/mission"}
           className={`${buttonVariants({
             variant: "default",
           })} md:text-xl md:h-12 md:px-6`}
@@ -29,7 +29,7 @@ export default function AboutNutshell() {
           Our mission
         </Link>
         <Link
-          href={"/about-us"}
+          href={"/about#team"}
           className={`${buttonVariants({
             variant: "secondary",
           })} md:text-xl md:h-12 md:px-6`}
