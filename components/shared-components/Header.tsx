@@ -10,6 +10,8 @@ import { CiSearch } from "react-icons/ci";
 
 import { useEffect, useState } from "react";
 import { mainMenuType } from "@/lib/types/menu-types";
+import { Dialog } from "@radix-ui/react-dialog";
+import { DialogSearchButton } from "./DialogSearchButton";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -63,7 +65,7 @@ export default function Header() {
         </Link>{" "}
       </nav>
       <div className="action hidden  lg:flex justify-between lg:w-24 gap-6 items-center">
-        <CiSearch className="text-grey stroke-1 w-7 h-7 cursor-pointer hover:text-accent" />
+        <DialogSearchButton />
         <FaGlobeAmericas
           className="text-grey w-6 h-6 cursor-pointer hover:text-accent"
           onClick={() => alert("choose a language")}
@@ -72,7 +74,7 @@ export default function Header() {
 
       {/* nav actions */}
       <div className="action lg:hidden   flex justify-between lg:w-24 gap-6 items-center">
-        <CiSearch className="text-grey stroke-1 w-7 h-7 hover:text-accent cursor-pointer" />
+        <DialogSearchButton />
         <FaGlobeAmericas
           className="text-grey w-6 h-6  cursor-pointer hover:text-accent"
           onClick={() => alert("choose a language")}
