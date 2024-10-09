@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { mainMenuType } from "@/lib/types/menu-types";
 import { Dialog } from "@radix-ui/react-dialog";
 import { DialogSearchButton } from "./DialogSearchButton";
+import SwitchLanguage from "./SwitchLanguage";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -66,19 +67,13 @@ export default function Header() {
       </nav>
       <div className="action hidden  lg:flex justify-between lg:w-24 gap-6 items-center">
         <DialogSearchButton />
-        <FaGlobeAmericas
-          className="text-grey w-6 h-6 cursor-pointer hover:text-accent"
-          onClick={() => alert("choose a language")}
-        />
+        <SwitchLanguage />
       </div>
 
       {/* nav actions */}
       <div className="action lg:hidden   flex justify-between lg:w-24 gap-6 items-center">
         <DialogSearchButton />
-        <FaGlobeAmericas
-          className="text-grey w-6 h-6  cursor-pointer hover:text-accent"
-          onClick={() => alert("choose a language")}
-        />
+        <SwitchLanguage />
         <div className="open-close relative  flex items-center justify-center">
           <CiMenuFries
             onClick={() => setOpen(!open)}
