@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <Partner />
       <AboutNutshell />
-      <EventUpcoming />
+      {/* <EventUpcoming /> */}
       <SignUp />
     </main>
   );
