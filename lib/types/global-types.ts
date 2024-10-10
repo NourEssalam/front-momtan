@@ -25,3 +25,15 @@ export type aboutAccordionType = {
   slug: string;
   accordions: { title: string; content: string }[];
 };
+
+export type BlogPostType = {
+  title: string;
+  slug: string;
+  publishDate: string; // ISO date string format
+  content: string;
+  author: string;
+  image: {
+    imgSrc: string;
+    alt: string;
+  };
+};
