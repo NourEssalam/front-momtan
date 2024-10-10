@@ -19,6 +19,7 @@ import {
 import { aboutAccordionType } from "@/lib/types/global-types";
 
 import type { Metadata } from "next";
+import BackLink from "@/components/shared-components/BackLink";
 
 export async function generateMetadata({
   params,
@@ -46,52 +47,25 @@ export default function Page({ params }: { params: { slug: string } }) {
   );
   const accordions = accordionsCategory[0].accordions;
   return (
-    <>
-      <Container className="my-0 mb-0">
-        <Breadcrumb className="mb-0 my-0 text-shade">
-          <BreadcrumbList className="text-shade/45">
-            <BreadcrumbItem>
-              <BreadcrumbLink className="hover:text-accent" href="/">
-                Home
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink className="hover:text-accent" href="/about">
-                About
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>{accordionsCategory[0].title}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </Container>
-
-      <Container className="" variant="rounded-primary">
-        <h1 className="text-2xl text-shade-strong font-medium sm:text-3xl lg:text-4xl leading-6 mb-8">
-          {accordionsCategory[0].title}
-        </h1>
-        <div className="">
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full lg:w-[80%] p-4 "
-          >
-            {accordions.map((item, index) => (
-              <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="text-xl font-medium text-left ">
-                  {item.title}
-                </AccordionTrigger>
-                <AccordionContent className="text-lg text-secondary">
-                  {item.content}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </Container>
-    </>
+    <Container className="flex flex-col gap-10 ">
+      <BackLink />
+      <h1 className="text-2xl text-shade-strong font-medium sm:text-3xl lg:text-4xl">
+        {accordionsCategory[0].title}
+      </h1>
+      <div className="">
+        <Accordion type="single" collapsible className="w-full lg:w-[80%]  ">
+          {accordions.map((item, index) => (
+            <AccordionItem value={`item-${index}`} key={index}>
+              <AccordionTrigger className="text-xl font-medium text-left ">
+                {item.title}
+              </AccordionTrigger>
+              <AccordionContent className="text-lg text-secondary">
+                {item.content}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </Container>
   );
 }

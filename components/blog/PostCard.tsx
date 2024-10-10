@@ -8,11 +8,11 @@ export default function PostCard({ title, slug, image }: BlogPostType) {
   return (
     <Link
       href={`/blog/${slug}/`}
-      className="flex flex-col gap-4 p-4 max-w-sm"
+      className="flex flex-col gap-4 p-4 w-full sm:max-w-sm"
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
     >
-      <div className="lg:w-80 lg:h-80 w-56 h-56 relative inset-0 rounded-3xl overflow-hidden">
+      <div className="sm:w-80 sm:h-80 w-60  h-60  relative inset-0 rounded-3xl overflow-hidden">
         <Image
           src={image.imgSrc}
           alt={image.alt}
