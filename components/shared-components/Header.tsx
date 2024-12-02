@@ -5,19 +5,31 @@ import Image from "next/image";
 import { mainMenu } from "@/lib/menus";
 import { CiMenuFries } from "react-icons/ci";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import { FaGlobeAmericas } from "react-icons/fa";
-import { CiSearch } from "react-icons/ci";
 
 import { useEffect, useState } from "react";
 import { mainMenuType } from "@/lib/types/menu-types";
-import { Dialog } from "@radix-ui/react-dialog";
 import { DialogSearchButton } from "./DialogSearchButton";
 import SwitchLanguage from "./SwitchLanguage";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [sticky, setSticky] = useState("initial");
 
   useEffect(() => {
+    let lastScroll = 0;
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setSticky("initial");
+      } else if (window.scrollY > lastScroll) {
+        setSticky("unset");
+      } else if (window.scrollY < lastScroll) {
+        setSticky("set");
+      }
+
+      lastScroll = window.scrollY - 1;
+    };
+    window.addEventListener("scroll", handleScroll);
+
     if (open) {
       // Use Tailwind's overflow-hidden utility to disable body scroll
       document.body.classList.add("overflow-hidden");
@@ -29,10 +41,19 @@ export default function Header() {
     // Cleanup when component unmounts
     return () => {
       document.body.classList.remove("overflow-hidden");
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [open]);
+
   return (
-    <header className="bg-section relative flex items-center py-5 px-5 md:px-10  lg:px-20 h-16  lg:h-20 w-full justify-between ">
+    <header
+      className={`bg-white flex items-center py-5 px-5 md:px-10  border-b-4 border-b-primary
+     lg:px-20 h-16   w-full justify-between  transition-all duration-700
+     ${sticky === "initial" ? "sticky top-0 opacity-100" : ""}
+
+     ${sticky === "set" ? "sticky top-0 z-20 " : ""}
+     ${sticky === "unset" ? "sticky top-0 opacity-0" : ""}`}
+    >
       <Link href="/" className=" w-16 h-16 lg:w-16 lg:h-16 ">
         <Image
           src="/img/logos/momtan-logo-header.png"
@@ -58,12 +79,12 @@ export default function Header() {
           </Link>
         ))}
         {/* cta */}
-        <Link
+        {/* <Link
           href="/donation"
           className="bg-primary/90 hover:bg-accent text-white uppercase font-base text-lg px-5 py-px border rounded-lg "
         >
           Donate
-        </Link>{" "}
+        </Link>{" "} */}
       </nav>
       <div className="action hidden  lg:flex justify-between lg:w-24 gap-6 items-center">
         <DialogSearchButton />
@@ -111,15 +132,16 @@ export default function Header() {
               {menu.name}
             </Link>
           ))}
+          {/* <Button asChild>
+            <Link
+              href="/donation"
+              //     className="bg-primary/90 hover:bg-primary hover:transform hover:scale-[1.05] text-white uppercase
+              //  font-medium text-xl px-5 py-px border rounded-lg "
+            >
+              Donate
+            </Link>
+          </Button> */}
         </div>
-
-        <Link
-          href="/donation"
-          className="bg-primary/90 hover:bg-primary text-white uppercase
-           font-medium text-xl px-5 py-px border rounded-lg "
-        >
-          Donate
-        </Link>
       </nav>
     </header>
   );

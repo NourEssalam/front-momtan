@@ -1,3 +1,4 @@
+import SmoothScroll from "@/components/contexts/ScrollContext";
 import AboutNutshell from "@/components/home/AboutNutshell";
 import EventUpcoming from "@/components/home/EventUpcoming";
 import Hero from "@/components/home/Hero";
@@ -6,12 +7,13 @@ import SignUp from "@/components/home/SignUp";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <Partner />
       <AboutNutshell />
-      <EventUpcoming />
+
+      {/* <EventUpcoming /> */}
       <SignUp />
-    </main>
+    </>
   );
 }

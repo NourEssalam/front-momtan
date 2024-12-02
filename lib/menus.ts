@@ -16,14 +16,14 @@ export const mainMenu: mainMenuType[] = [
     name: "About",
     href: "/about",
   },
-  {
-    name: "Programs",
-    href: "/Programs",
-  },
-  {
-    name: "Events",
-    href: "/events",
-  },
+  // {
+  //   name: "Programs",
+  //   href: "/Programs",
+  // },
+  // {
+  //   name: "Events",
+  //   href: "/events",
+  // },
   {
     name: "Contact",
     href: "/contact",

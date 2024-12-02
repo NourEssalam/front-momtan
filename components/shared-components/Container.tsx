@@ -4,6 +4,7 @@ import React from "react";
 // import clsx from "clsx";
 
 type ContainerProps = {
+  id?: string;
   variant?: "default" | "rounded-primary" | "rounded-secondary";
   className?: string; // Allow custom styles to be passed
   innerClassName?: string;
@@ -11,6 +12,7 @@ type ContainerProps = {
 
 export default function Container({
   children,
+  id,
   variant = "default",
   className,
   innerClassName,

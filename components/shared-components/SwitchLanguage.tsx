@@ -24,7 +24,7 @@ export default function SwitchLanguage() {
           <FaGlobeAmericas className="text-grey w-6 h-6  cursor-pointer hover:text-accent" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-48 mr-10">
         <DropdownMenuLabel>Choose Your language</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>

@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared-components/Header";
 import Footer from "@/components/shared-components/Footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Momtan Next App",
@@ -28,7 +29,7 @@ export default function RootLayout({
       >
         <div
           className="absolute left-0 right-0 top-0 -z-10 m-auto h-full w-full 
-        rounded-full bg-fuchsia-200 opacity-20 blur-[100px]"
+        rounded-full bg-fuchsia-200 opacity-30 blur-[100px]"
         ></div>
 
         <Header />
@@ -36,6 +37,11 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      {/* TODO: Add Lenis for smooth scrolling */}
+      {/* <Script
+        src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"
+        strategy="beforeInteractive"
+      /> */}
     </html>
   );
 }

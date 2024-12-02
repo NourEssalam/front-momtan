@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CiSearch } from "react-icons/ci";
 import SearchResultElement from "./SearchResultElement";
+import { Description } from "@radix-ui/react-dialog";
 
 export function DialogSearchButton() {
   return (
@@ -26,12 +27,12 @@ export function DialogSearchButton() {
         </span>
       </DialogTrigger>
       <DialogContent
-        className=" gap-0 max-w-[1024px] inset-0 p-4 mx-auto md:my-10  bg-white left-[0%] top-[0%] 
+        className=" gap-0 max-w-[640px] inset-0 p-4 mx-auto md:my-10  bg-white left-[0%] top-[0%] 
       translate-x-[0%] translate-y-[0%]"
       >
         <DialogHeader className=" text-left mb-0 gap-2 space-x-0">
-          <DialogTitle>Search</DialogTitle>
-          <DialogDescription>...</DialogDescription>
+          <DialogTitle className="text-2xl">Search</DialogTitle>
+          <Description></Description>
 
           <div className="">
             <Label htmlFor="search" className="sr-only">
@@ -41,6 +42,7 @@ export function DialogSearchButton() {
               type="search"
               id="search"
               placeholder="Search for anything..."
+              className="md:w-1/2"
             />
           </div>
         </DialogHeader>

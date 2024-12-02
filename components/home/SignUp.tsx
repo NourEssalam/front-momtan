@@ -37,16 +37,17 @@ export default function SignUp() {
 
   return (
     <Container
+      id="sign-up"
       variant="rounded-primary"
-      innerClassName="p-0 md:p-0 grid grid-cols-1  lg:grid-cols-[2fr_1fr] gap-4 items-center bg-green-300"
+      innerClassName="p-0 md:p-0 grid grid-cols-1  lg:grid-cols-[2fr_1fr] gap-4 border-2 items-center bg-white"
     >
-      <div className="flex flex-col  justify-center gap-5 py-10 px-10 text-[#2d234b]">
-        <h1 className="font-medium capitalize text-2xl sm:text-3xl lg:text-4xl leading-6 mb-8">
+      <div className="flex flex-col  justify-center gap-2 py-10 px-10 text-[#2d234b]">
+        <h1 className="font-medium capitalize text-2xl sm:text-3xl lg:text-4xl leading-6 mb-4">
           Sign-up for updates
         </h1>
         <p>
-          To receive updates from Momtan Organization, about our latest
-          programs, reports, campaigns and webinars,etc.
+          To receive updates about our latest programs, reports, campaigns and
+          webinars,etc.
         </p>
 
         <Form {...form}>
@@ -136,7 +137,7 @@ export default function SignUp() {
         </Form>
       </div>
 
-      <div className="relative inset-0 w-full h-full bg-shade opacity-40 ">
+      <div className="relative inset-0 w-full h-full bg-shade opacity-60 ">
         <Image
           src="/img/gallery/activities.jpg"
           alt="activities"
