@@ -5,5 +5,5 @@ export default function AboutLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main className="lg:my-10">{children}</main>;
+  return <>{children}</>;
 }

@@ -21,7 +21,9 @@ export function DialogSearchButton() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <CiSearch className="text-grey stroke-1 w-7 h-7 cursor-pointer hover:text-accent" />
+        <span className="cursor-pointer">
+          <CiSearch className="text-grey stroke-1 w-7 h-7 hover:text-accent" />
+        </span>
       </DialogTrigger>
       <DialogContent
         className=" gap-0 max-w-[1024px] inset-0 p-4 mx-auto md:my-10  bg-white left-[0%] top-[0%] 
@@ -29,6 +31,7 @@ export function DialogSearchButton() {
       >
         <DialogHeader className=" text-left mb-0 gap-2 space-x-0">
           <DialogTitle>Search</DialogTitle>
+          <DialogDescription>...</DialogDescription>
 
           <div className="">
             <Label htmlFor="search" className="sr-only">

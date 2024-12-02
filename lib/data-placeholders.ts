@@ -1,5 +1,6 @@
 import {
   aboutAccordionType,
+  BlogPostType,
   eventMetaDataType,
   infoIntroType,
 } from "./types/global-types";
@@ -193,6 +194,72 @@ export const aboutAccordion: aboutAccordionType[] = [
           "As we continue to grow, we remain committed to our mission and excited for what the future holds.",
       },
     ],
+  },
+];
+
+export const blogPosts: BlogPostType[] = [
+  {
+    title: "Empowering Citizens for Sustainable Growth",
+    slug: "empowering-citizens-sustainable-growth",
+    publishDate: "2024-10-05",
+    content:
+      "In this post, we explore how active citizenship can drive sustainable development across Tunisia and the role of our community programs in fostering positive change.",
+    author: "Amira Ben Youssef",
+    image: {
+      imgSrc: "/img/posts/post-1.jpg",
+      alt: "Citizens gathered for a community event",
+    },
+  },
+  {
+    title: "Tackling Climate Change: Local Solutions, Global Impact",
+    slug: "tackling-climate-change",
+    publishDate: "2024-09-28",
+    content:
+      "Learn about our initiatives in renewable energy and waste management that are helping combat climate change on a local level while contributing to global sustainability goals.",
+    author: "Ahmed Jaziri",
+    image: {
+      imgSrc: "/img/posts/post-2.jpg",
+
+      alt: "Solar panels in a rural Tunisian community",
+    },
+  },
+  {
+    title: "The Power of Education in Building a Better Future",
+    slug: "power-of-education",
+    publishDate: "2024-09-20",
+    content:
+      "Discover the transformative impact of education on individuals and communities as we work to provide resources and opportunities for lifelong learning across Tunisia.",
+    author: "Fatma Khelil",
+    image: {
+      imgSrc: "/img/posts/post-3.jpg",
+
+      alt: "Children attending a school session",
+    },
+  },
+  {
+    title: "Tunisia’s Journey Towards Gender Equality",
+    slug: "journey-towards-gender-equality",
+    publishDate: "2024-09-10",
+    content:
+      "This post delves into the progress and challenges of achieving gender equality in Tunisia, highlighting key initiatives that empower women and promote equal opportunities.",
+    author: "Layla Mansouri",
+    image: {
+      imgSrc: "/img/posts/post-4.jpg",
+
+      alt: "Women participating in a leadership workshop",
+    },
+  },
+  {
+    title: "The Importance of Sustainable Agriculture for Tunisia’s Future",
+    slug: "sustainable-agriculture-future",
+    publishDate: "2024-08-30",
+    content:
+      "Explore how sustainable farming practices are helping Tunisian farmers preserve the environment while ensuring food security for future generations.",
+    author: "Sami Bouzid",
+    image: {
+      imgSrc: "/img/posts/post-5.jpg",
+      alt: "Farmer working on sustainable crop production",
+    },
   },
 ];
 
