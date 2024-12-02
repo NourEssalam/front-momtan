@@ -12,9 +12,9 @@ export default function Blog() {
             Blog
           </h1>
           <p
-            className="text-lg xl:text-xl font-light text-secondary
+            className="text-lg xl:text-xl font-base text-gray-900
           sm:text-lg
-          lg:text-base"
+          "
           >
             Stay Informed on the Latest Initiatives, Success Stories, and
             Thought Leadership in Sustainability and Active Citizenship

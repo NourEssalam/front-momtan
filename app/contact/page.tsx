@@ -43,7 +43,7 @@ export default function Contact() {
           hear from you!
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5 lg:gap-10">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-5 lg:gap-10">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit((values) => {
@@ -116,13 +116,15 @@ export default function Contact() {
           </form>
         </Form>
 
-        <div className="flex flex-col justify-between md:p-5">
+        <div className="flex flex-col gap-10 justify-between md:p-5">
           <address className="contacts flex flex-col gap-4 ">
             {contactInfo.map((info: contactInfoType) => (
               <Link
                 className={`${
-                  info.type === "address" ? "font-medium" : "font-normal"
-                } text-lg inline-block text-grey hover:text-accent transition-colors duration-300`}
+                  info.type === "address"
+                    ? "font-medium"
+                    : "font-normal hover:text-accent"
+                } text-lg inline-block text-grey  transition-colors duration-300`}
                 href={!info.link ? "#" : info.link}
                 key={info.value}
               >
@@ -135,9 +137,9 @@ export default function Contact() {
               <li key={social.name}>
                 <Link
                   href={social.href}
-                  className="text-sm  text-grey hover:text-accent transition-colors duration-300"
+                  className=" text-grey hover:text-accent transition-colors duration-300"
                 >
-                  <social.Icon className="w-8 h-8 " />
+                  <social.Icon className="w-10 h-10 " />
                 </Link>
               </li>
             ))}

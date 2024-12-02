@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="container flex flex-col  lg:flex-row  lg:gap-20  gap-10 items-center  justify-center ">
         <div
           className="flex flex-col items-center justify-center text-center  
-                   text-grey font-medium sm:font-bold  -tracking-tight
+                   text-secondary font-medium sm:font-bold  -tracking-tight
                    md:px-10
                    lg:items-start lg:text-left lg:mb-28"
         >
@@ -16,8 +16,8 @@ export default function Hero() {
             The association of citizenship and sustainable development
           </h1>
           <p
-            className="text-xs text-gray-600 
-                      sm:text-lg
+            className="text-lg text-gray-700
+                      sm:text-xl
                       lg:text-base"
           >
             A nation dedicated to the principles of the Sustainable Development
@@ -25,15 +25,15 @@ export default function Hero() {
           </p>
           <div className="flex gap-4 lg:gap-8 mt-10">
             <Link
-              href={"/get-involved"}
+              href={"#sign-up"}
               className={`${buttonVariants({
                 variant: "default",
               })} md:text-xl md:h-12 md:px-6`}
             >
-              Get Involved
+              Subscribe &darr;
             </Link>
             <Link
-              href={"/about-us"}
+              href={"/about"}
               className={`${buttonVariants({
                 variant: "secondary",
               })} md:text-xl md:h-12 md:px-6`}

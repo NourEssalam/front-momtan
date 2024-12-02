@@ -5,12 +5,9 @@ import Image from "next/image";
 import { mainMenu } from "@/lib/menus";
 import { CiMenuFries } from "react-icons/ci";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import { FaGlobeAmericas } from "react-icons/fa";
-import { CiSearch } from "react-icons/ci";
 
 import { useEffect, useState } from "react";
 import { mainMenuType } from "@/lib/types/menu-types";
-import { Dialog } from "@radix-ui/react-dialog";
 import { DialogSearchButton } from "./DialogSearchButton";
 import SwitchLanguage from "./SwitchLanguage";
 
@@ -82,12 +79,12 @@ export default function Header() {
           </Link>
         ))}
         {/* cta */}
-        <Link
+        {/* <Link
           href="/donation"
           className="bg-primary/90 hover:bg-accent text-white uppercase font-base text-lg px-5 py-px border rounded-lg "
         >
           Donate
-        </Link>{" "}
+        </Link>{" "} */}
       </nav>
       <div className="action hidden  lg:flex justify-between lg:w-24 gap-6 items-center">
         <DialogSearchButton />
@@ -135,13 +132,15 @@ export default function Header() {
               {menu.name}
             </Link>
           ))}
-          <Link
-            href="/donation"
-            className="bg-primary/90 hover:bg-primary text-white uppercase
-           font-medium text-xl px-5 py-px border rounded-lg "
-          >
-            Donate
-          </Link>
+          {/* <Button asChild>
+            <Link
+              href="/donation"
+              //     className="bg-primary/90 hover:bg-primary hover:transform hover:scale-[1.05] text-white uppercase
+              //  font-medium text-xl px-5 py-px border rounded-lg "
+            >
+              Donate
+            </Link>
+          </Button> */}
         </div>
       </nav>
     </header>
