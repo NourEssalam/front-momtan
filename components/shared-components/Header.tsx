@@ -10,6 +10,9 @@ import { CiSearch } from "react-icons/ci";
 
 import { useEffect, useState } from "react";
 import { mainMenuType } from "@/lib/types/menu-types";
+import { Dialog } from "@radix-ui/react-dialog";
+import { DialogSearchButton } from "./DialogSearchButton";
+import SwitchLanguage from "./SwitchLanguage";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -48,7 +51,7 @@ export default function Header() {
           <Link
             key={menu.name}
             href={menu.href}
-            className="text-grey font-medium text-lg capitalize transition-colors duration-300 inline-block
+            className="text-grey font-base text-lg capitalize transition-colors duration-300 inline-block
            py-[1.2rem] hover:text-accent active:text-shade"
           >
             {menu.name}
@@ -57,26 +60,20 @@ export default function Header() {
         {/* cta */}
         <Link
           href="/donation"
-          className="bg-primary/90 hover:bg-accent text-white uppercase font-medium text-lg px-5 py-px border rounded-lg "
+          className="bg-primary/90 hover:bg-accent text-white uppercase font-base text-lg px-5 py-px border rounded-lg "
         >
           Donate
         </Link>{" "}
       </nav>
       <div className="action hidden  lg:flex justify-between lg:w-24 gap-6 items-center">
-        <CiSearch className="text-grey stroke-1 w-7 h-7 cursor-pointer hover:text-accent" />
-        <FaGlobeAmericas
-          className="text-grey w-6 h-6 cursor-pointer hover:text-accent"
-          onClick={() => alert("choose a language")}
-        />
+        <DialogSearchButton />
+        <SwitchLanguage />
       </div>
 
       {/* nav actions */}
       <div className="action lg:hidden   flex justify-between lg:w-24 gap-6 items-center">
-        <CiSearch className="text-grey stroke-1 w-7 h-7 hover:text-accent cursor-pointer" />
-        <FaGlobeAmericas
-          className="text-grey w-6 h-6  cursor-pointer hover:text-accent"
-          onClick={() => alert("choose a language")}
-        />
+        <DialogSearchButton />
+        <SwitchLanguage />
         <div className="open-close relative  flex items-center justify-center">
           <CiMenuFries
             onClick={() => setOpen(!open)}
