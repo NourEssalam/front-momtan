@@ -109,6 +109,7 @@ export default function Header() {
               href={menu.href}
               className="text-grey font-medium text-xl capitalize transition-colors duration-300 
            py-[1.2rem] hover:text-shade active:text-shade"
+              onClick={() => setOpen(!open)}
             >
               {menu.name}
             </Link>
